@@ -16,5 +16,12 @@ I'm using a OpenSource software for eye tracking and transmit the eye position d
 </pre>
 
 
-### Gameplay:
+### Gameplay/Result:
 ##### Using eye tracking to zoom in the UI or Mirror when player watching.
+![eye1](img/eye1.gif)
+
+--------
+<p float="left">
+<img src="img/eye2.gif" alt="eye2" width="550"/>
+<img src="img/eye3.gif" alt="eye3" width="350"/>
+</p>
