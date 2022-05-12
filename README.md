@@ -20,8 +20,8 @@ I think we may use eye tracking to display or zoom in the UI/Button/Models that 
 もしかして、視線トラッキングを利用して、プレーヤーが見たいUIやボタン、モデルを表示したり、ズームインしたりすることができると思います。
 
 ### Pipeline/Workflow 方法: 
-I'm using a Open Source software for eye tracking and transmit the eye position data to Unity game engine through TCP socket.\ 
-オープンソースの[視線トラッキング](https://sourceforge.net/projects/gazepointer/)を使い、TCP SocketでUnityのゲームエンジンに視線データを送信しています。\
+I'm using a Open Source software for eye tracking and transmit the eye position data to Unity game engine through TCP socket.\
+オープンソースの[視線トラッキング](https://sourceforge.net/projects/gazepointer/)を使い、TCP SocketでUnityのゲームエンジンに視線データを送信しています。
 
 [GazeFlow](https://gazerecorder.com/)
 <pre>
