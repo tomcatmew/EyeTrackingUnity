@@ -32,7 +32,7 @@ I'm using a Open Source software for eye tracking and transmit the eye position 
 ### Gameplay/Result 結果:
 ##### Using eye tracking to zoom in the UI or Mirror when player watching.
 ##### 視線トラッキングを利用して、プレイヤーが見ているときにUIやミラーを拡大することができます。
-<img src="img/eye_800.gif" alt="eye1" width="800"/>
+<img src="img/eye800.gif" alt="eye1" width="800"/>
 
 --------
 ##### Because the camera capture is mirror-inversed, I manually inverse it back to the correct direction
