@@ -9,4 +9,12 @@ If we always show the big UI or big mirror on the screen that will somehow distr
 I think we may use eye tracking to display or zoom in the UI/Button/Models that users want to look. 
 
 ### Pipeline/Workflow:
+I'm using a OpenSource software for eye tracking and transmit the eye position data to Unity game engine through TCP socket.\ 
+[GazeFlow](https://gazerecorder.com/)
+<pre>
+<b>GazeFlow</b> ---→ <b>TCP socket</b>  --→ <b>Unity</b> 
+</pre>
 
+
+### Gameplay:
+##### Using eye tracking to zoom in the UI or Mirror when player watching.
