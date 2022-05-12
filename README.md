@@ -21,7 +21,8 @@ I'm using a OpenSource software for eye tracking and transmit the eye position d
 ![eye1](img/eye1.gif)
 
 --------
+##### Because the camera capture is mirror-inversed, I manually inverse it back to the correct direction
 <p float="left">
 <img src="img/eye2.gif" alt="eye2" width="550"/>
-<img src="img/eye3.gif" alt="eye3" width="350"/>
+<img src="img/eye3_flip.gif" alt="eye3" width="350"/>
 </p>
