@@ -112,12 +112,42 @@ public class TCPConnection : MonoBehaviour
         //To get your AppKey register at http://gazeflow.epizy.com/GazeFlowAPI/register/
         string AppKey = "AppKeyTrial";
         gazeFlowAPI.Connect("127.0.0.1", 43333, AppKey);
+        StartCoroutine(TCPRoutine());
     }
 
+    IEnumerator TCPRoutine()
+    {
+        while (true)
+        {
+            CGazeData GazeData = gazeFlowAPI.ReciveGazeDataSyn();
+            if (GazeData == null)
+            {
+                Debug.Log("Disconected");
+                yield return null;
+            }
+            else
+            {
+                gazeX = GazeData.GazeX;
+                gazeY = GazeData.GazeY;
 
-    
+                newUIX = scale(0, 1920, 0, 1920, gazeX);
+                newUIY = scale(0, 1080, 1080, 0, gazeY);
+                //Debug.Log(String.Format("Gaze: {0} , {1}", newUIX, newUIY));
+                Vector3 new_pos = new Vector3(newUIX, newUIY, 0);
+                UICircle.position = new_pos;
+                //UICircle.position = Vector3.Lerp(UICircle.position, new_pos, Time.deltaTime);
+                //Debug.Log(String.Format("Gaze: {0} , {1}", GazeData.GazeX, GazeData.GazeY));
+                //Debug.Log(String.Format("Head: {0} , {1}, {2}", GazeData.HeadX, GazeData.HeadY, GazeData.HeadZ));
+                //Debug.Log(String.Format("Head rot : {0} , {1}, {2}", GazeData.HeadYaw, GazeData.HeadPitch, GazeData.HeadRoll));
+                //Debug.Log("");
+            }
+            yield return new WaitForSeconds(0.2f);
+        }
+    }
+
     void Update()
     {
+        /*
         CGazeData GazeData = gazeFlowAPI.ReciveGazeDataSyn();
         if (GazeData == null)
         {
@@ -140,6 +170,7 @@ public class TCPConnection : MonoBehaviour
             //Debug.Log(String.Format("Head rot : {0} , {1}, {2}", GazeData.HeadYaw, GazeData.HeadPitch, GazeData.HeadRoll));
             //Debug.Log("");
         }
+        */
         if (EyeContactBotPanel())
         {
             panelTime += Time.deltaTime;
