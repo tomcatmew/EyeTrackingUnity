@@ -33,6 +33,7 @@ Unity's TCP trasmission is slow. We need to make our TCP call a Async function b
 
 UnityでのTcp通信は本当に遅いです。\
 約5回/秒 、つまり、 視点トラッキングデータの更新速度は5FPS\
+ゲームのリフレッシュ・レートは60FPS\
 Multitaskingを使用しないと、TCPが原因でゲームのリフレッシュ・レートが遅くなります。
 
 ```
