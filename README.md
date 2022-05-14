@@ -7,7 +7,7 @@ This is an experimental project that I test on Unity platform to explore some ki
 
 #### TODO
 - [x] Build connection between the eye tracking app and Unity
-- [ ] Change TCP transmit to asynchronous function
+- [x] Change TCP transmit to asynchronous function
 
 ### Problem Statement 可能な適用場所: 
 In many racing games, we could switch our views from third-person to first-person. \
@@ -28,6 +28,16 @@ I'm using a Open Source software for eye tracking and transmit the eye position 
 <b>GazeFlow</b> ---→ <b>TCP socket</b>  --→ <b>Unity</b> 
 </pre>
 
+### TCP connection problem TCPの問題
+Unity's TCP trasmission is slow. We need to make our TCP call a Async function by using Unity Coroutine. 
+
+UnityでのTcp通信は本当に遅いです。
+約5回/秒 、つまり、 視点トラッキングデータの更新速度は　5FPS
+Multitaskingを使用しないと、TCPが原因でゲームのリフレッシュ・レートが遅くなります。
+
+```
+StartCoroutine(TCPRoutine());
+```
 
 ### Gameplay/Result 結果:
 ##### Using eye tracking to zoom in the UI or Mirror when player watching.
