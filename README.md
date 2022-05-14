@@ -54,7 +54,7 @@ StartCoroutine(TCPRoutine());
 
 ### Conclusion: 
 
-I'm currently using TCP socket to transmit the data. It is really slow (20 frames/sec). It slow down game a lot so I have to change it to a multi thread system.\
+I'm currently using TCP socket to transmit the data. It is really slow (5 frames/sec). It slow down game a lot so I have to change it to a multithread system.\
 I think if the game engine has some built-in eye tracking system like VR, it would provide better result.
 
 現在、TCPソケットを使用してデータを送信しています。本当に遅いんだ(20フレーム/秒)。そのため、マルチスレッドに変更する必要があります (Using "Async") 。
